@@ -19,7 +19,8 @@ requires = [
 [tool.briefcase.app.beeswift.macOS]
 requires = [
     'toga-cocoa>=0.3.0.dev34',
-    'std-nslog~=1.0.0'
+    'std-nslog~=1.0.0',
+    'sympy'
 ]
 
 [tool.briefcase.app.beeswift.linux]
