@@ -1,0 +1,28 @@
+[briefcase.formats.android]
+gradle = briefcase.platforms.android.gradle
+
+[briefcase.formats.ios]
+xcode = briefcase.platforms.iOS.xcode
+
+[briefcase.formats.linux]
+appimage = briefcase.platforms.linux.appimage
+flatpak = briefcase.platforms.linux.flatpak
+
+[briefcase.formats.macos]
+app = briefcase.platforms.macOS.app
+homebrew = briefcase.platforms.macOS.homebrew
+xcode = briefcase.platforms.macOS.xcode
+
+[briefcase.formats.windows]
+app = briefcase.platforms.windows.app
+visualstudio = briefcase.platforms.windows.visualstudio
+
+[briefcase.platforms]
+android = briefcase.platforms.android
+iOS = briefcase.platforms.iOS
+linux = briefcase.platforms.linux
+macOS = briefcase.platforms.macOS
+windows = briefcase.platforms.windows
+
+[console_scripts]
+briefcase = briefcase.__main__:main

@@ -1,0 +1,2 @@
+[console_scripts]
+dmgbuild = dmgbuild.__main__:main
