@@ -25,8 +25,8 @@ Bundle Identifier [com.example]:
 Project Name [Bee Swift]: 
 Description [My first application]: Add Python to a SwiftUI application with the BeeWare Briefcase
 Author [Jane Developer]:
-Author's Email [eliott@com.example]:
-Application URL []: https://www.momdyn.com
+Author's Email [jane@example.com]:
+Application URL [[https://example.com/beeswift]:
 Project License [1]:
 GUI Framework [1]:
 ```
