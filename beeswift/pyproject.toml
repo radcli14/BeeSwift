@@ -20,7 +20,7 @@ requires = [
 requires = [
     'toga-cocoa>=0.3.0.dev34',
     'std-nslog~=1.0.0',
-    'sympy'
+    'sympy==1.11.1'
 ]
 
 [tool.briefcase.app.beeswift.linux]
@@ -56,7 +56,8 @@ requires = [
 [tool.briefcase.app.beeswift.iOS]
 requires = [
     'toga-iOS>=0.3.0.dev34',
-    'std-nslog~=1.0.0'
+    'std-nslog~=1.0.0',
+    'sympy==1.11.1'
 ]
 
 [tool.briefcase.app.beeswift.android]
