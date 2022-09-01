@@ -57,7 +57,7 @@ cd beeswift
 vim pyproject.toml
 ```
 
-Type `a` to append text, then scroll to the line that containes the requirements for the iOS app.
+Open the file `pyproject.toml` in a text editor, then scroll to the line that containes the requirements for the iOS app.
 Specifically make sure this is under the `# Mobile deployments` line, and is preceeded by `[tool.briefcase.app.beeswift.iOS]`.
 Add `sympy` and the version number to the `requires = ... ` section.
 
@@ -70,8 +70,6 @@ requires = [
     'sympy==1.11.1'
 ]
 ```
-
-Press the `esc` button and then type `:wq` and `enter` to write and quit.
 
 
 ## Create the iOS Project
