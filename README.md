@@ -54,7 +54,6 @@ In this example, we are using `sympy`, though for your application you will like
 
 ```
 cd beeswift
-vim pyproject.toml
 ```
 
 Open the file `pyproject.toml` in a text editor, then scroll to the line that containes the requirements for the iOS app.
