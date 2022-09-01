@@ -101,7 +101,7 @@ If you do choose to skip this optional step, then portions of the code in the `A
 In XCode, in the tree on the left hand side, right click `Supporting Files` and then `New File`.
 Select `Header File` in the menu, then click `Next`.
 Enter the name `AppDelegate` then click `Create`, without modifying any defaults.
-Under the commented header section, delete any uncommented code, and replace with the following.
+Under the commented section, delete any existing code, and replace with the following:
 
 ```objc
 #import <UIKit/UIKit.h>
@@ -119,6 +119,7 @@ Under the commented header section, delete any uncommented code, and replace wit
 In Xcode, in the tree on the left hand side, right click `Supporting Files` and then `New File`.
 Select `Objective C File` in the menu, then click `Next`.
 Enter the name `AppDelegate` then click `Next`, and finally `Create` on the next window, without modifying any defaults.
+Under the commented section, delete any existing code, and replace with the following.
 
 ```objc
 #import "AppDelegate.h"
@@ -139,6 +140,11 @@ Enter the name `AppDelegate` then click `Next`, and finally `Create` on the next
 @end
 ```
 
+While much of this is boiler-plate, there are two lines that should be highlighted.
+First, the `#import "Bee_Swift-Swift.h"` line will form a bridge for this Objective C file to recognize its Swift counterpart.
+Second, the `[self swiftuiExtension];` will call the corresponding method that will be created in the next step.
+
+
 ## Create Swift AppDelegate Extension
 
 In Xcode, in the tree on the left hand side, right click `beeswift` and then `New File`.
@@ -152,6 +158,8 @@ Inside the newly created `Bee Swift-Bridging-Header.h` file add the following.
 #include <dlfcn.h>
 #include "AppDelegate.h"
 ```
+
+This will expose various C headers that we want to be available to Swift, without which we would not have access to Python or the ability to extend the `AppDelegate`.
 
 Inside the new `AppDelegateExtension.swift` file, add the following.
 
@@ -190,6 +198,9 @@ import PythonKit
     }
 }
 ```
+
+Here, the sections under the `// Do some Python stuff` and `// Do some sympy stuff` comments are included for example only, you will delete them to include your own code.
+Importantly, the `rootView` argument to `UIHostingController` is where you will add your own `SwiftUI` views, in this case a vertical stack with three text fields is used to show the output of the Python code that preceded it.
 
 ## Update the Objective C Main File
 
