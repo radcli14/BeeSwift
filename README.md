@@ -207,6 +207,12 @@ Modify the call to `UIApplicationMain` in the `main.m` script, replacing `@Pytho
 UIApplicationMain(argc, argv, nil, @"AppDelegate");
 ```
 
+## Add `AppDelegate` to the Compile Sources
+
+Click on the project (left upper on your Xcode window), then click on `Build Phases` tab and `Compile Sources`.
+Check whether `AppDelegate.m` is added to the list. 
+If not, click plus button and add `AppDelegate.m.
+
 ## Run the app
 
 If all the previous steps ran as-intended, then you should be able to run and see a simple app window, showing the value for `pi`, sine of 1, and a basic symbolic expression.
